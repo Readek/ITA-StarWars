@@ -1,0 +1,75 @@
+.topNavBarLogoLogin {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.topNavBarLogo {
+    max-height: 115px;
+    padding: 20px;
+}
+.topNavBarLogoM {
+    display: none;
+    max-height: 80px;
+    padding: 20px;
+}
+@media (max-width: 800px) {
+    .topNavBarLogo {display: none;}
+    .topNavBarLogoM {display: block;}
+}
+
+.topNavBarLoginDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+    text-transform: uppercase;
+}
+.topNavBarLoginSep {
+    color: var(--fadedColor);
+}
+
+.topNavBarPageSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-top: var(--fadedColor) solid 2px;
+    border-bottom: var(--fadedColor) solid 2px;
+}
+
+.topNavBarPageLink {
+    height: 100%;
+}
+.topNavBarPageBtn {
+    padding: 15px 20px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-left: 2px var(--fadedColor) solid;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    color: var(--textSecondary);
+    --activeColor: var(--textSecondary);
+}
+.topNavBarPageBtn:hover {
+    background-color: var(--fadedColor);
+}
+.topNavBarPageLink:last-child {
+    border-right: 2px var(--fadedColor) solid;
+}
+.topNavBarPageActive {
+    color: var(--textPrimary);
+    border-bottom: var(--activeColor) 2px solid; 
+}
+.topNavBarPageActiveBlue {
+    --activeColor: var(--highlightColor);
+}
