@@ -11,3 +11,15 @@ export async function fetchStarships(customUrl = null) {
     return data.json();
 
 }
+
+/**
+ * Asks for a specific starship
+ * @param {Number} id - Ship id
+ */
+export async function fetchStarship(id) {
+    
+    const data = await fetch(url + "starships/" + id);
+    if (!data.ok) return null;
+    return data.json();
+
+}

@@ -1,0 +1,70 @@
+.shipDetailsContent {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-image: url(/Star_BG.jpeg);
+    background-position: center top;
+    background-repeat: repeat;
+}
+
+.shipDetailsStarshipTitle {
+    border-top: 2px solid var(--fadedColor);
+    border-bottom: 2px solid var(--fadedColor);
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 20px 0px;
+    width: 1300px;
+    max-width: 100%;
+}
+
+.shipDetailsShipDiv {
+    display: flex;
+    gap: 10px;
+    width: 1300px;
+    max-width: 100%;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+}
+
+
+.shipDetailsShipImg {
+    width: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+    
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+}
+
+.shipDetailsDetDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #212529;
+    border-left: #924b4b solid 3px;
+    padding: 15px;
+    color: var(--textSecondary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.shipDetailsDetName {
+    color: var(--textPrimary);
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.shipDetailsDetProps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
