@@ -9,3 +9,14 @@
     background-position: center top;
     background-repeat: repeat;
 }
+
+.shipListLoadingDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.shipListLoading {
+    padding: 10px 20px;
+    color: var(--textSecondary);
+    background-color: var(--fadederColor);
+}
