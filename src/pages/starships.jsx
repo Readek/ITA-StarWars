@@ -23,11 +23,12 @@ export default function Starships() {
         {shipsData[1] && (<>
 
             {shipsData.map(ship => (
-            <Starship
-                name={ship.name}
-                model={ship.model}
-                id={ship.id}
-            />))}
+                <Starship
+                    name={ship.name}
+                    model={ship.model}
+                    id={ship.id}
+                />
+            ))}
 
             {shipsNextPage !== null && (
                 <LoadingShipsMessage/>

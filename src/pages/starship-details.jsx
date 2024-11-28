@@ -14,8 +14,7 @@ export async function loader({params}) {
 export default function StarshipDetails() {
 
     const { shipsData } = useContext(SwapiContext);
-    const [shipData, setShipData ] = useState({});
-
+    const [ shipData, setShipData ] = useState({});
     const shipId = useLoaderData();
     
     // initial fetch
@@ -48,7 +47,7 @@ export default function StarshipDetails() {
 
             <img
                 src={`${visualUrl}starships/${shipId}.jpg`}
-                alt="Starship Image"
+                alt=" "
                 className="shipDetailsShipImg"
                 onError={({ currentTarget }) => {
                     currentTarget.onerror = null; // prevents looping

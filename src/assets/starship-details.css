@@ -27,6 +27,7 @@
     gap: 10px;
     width: 1300px;
     max-width: 100%;
+    animation: fadeInFromRight .3s;
 
     @media (max-width: 800px) {
         flex-direction: column;

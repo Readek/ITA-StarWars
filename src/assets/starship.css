@@ -7,6 +7,7 @@
     width: 1000px;
     max-width: 100%;
     transition: filter .2s, transform .2s;
+    animation: fadeInFromRight .3s;
 }
 .shipListDiv:hover {
     filter: brightness(1.3);
