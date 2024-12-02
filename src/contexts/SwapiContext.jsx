@@ -8,7 +8,7 @@ function SwapiProvider({ children }) {
     const [shipsData, setShipsData] = useState([]);
     const [shipsNextPage, setShipsNextPage] = useState();
 
-    function askForStarships() {
+    async function askForStarships() {
 
         fetchStarships(shipsNextPage).then((jsonData) => {
 

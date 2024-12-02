@@ -3,7 +3,7 @@ import NavBar from "../components/navbar";
 import { fetchStarship } from "../data/Fetch Swapi.mjs";
 import { useContext, useEffect, useState } from "react";
 import "../assets/starship-details.css"
-import { SwapiContext } from "../context/SwapiContext";
+import { SwapiContext } from "../contexts/SwapiContext";
 
 const visualUrl = "https://starwars-visualguide.com/assets/img/";
 

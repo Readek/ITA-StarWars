@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: #0a0b0b;
 }
 
 .topNavBarLogo {
@@ -22,13 +23,18 @@
 .topNavBarLoginDiv {
     position: absolute;
     display: flex;
-    align-items: center;
-    justify-content: end;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
     gap: 10px;
     width: 100%;
     height: 100%;
     margin-right: 50px;
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
 }
 .topNavBarLoginSep {
     color: var(--fadedColor);
@@ -42,6 +48,7 @@
     height: 60px;
     border-top: var(--fadedColor) solid 2px;
     border-bottom: var(--fadedColor) solid 2px;
+    background-color: #0a0b0b;
 }
 
 .topNavBarPageLink {
@@ -72,4 +79,22 @@
 }
 .topNavBarPageActiveBlue {
     --activeColor: var(--highlightColor);
+}
+
+.topNavBarUserName {
+    color: var(--textSecondary);
+}
+
+.topNavBarSignOut {
+    padding: 7px 10px;
+    color: var(--textSecondary);
+    border: var(--fadedColor) 1px solid;
+    border-radius: 5px;
+    background-color: var(--fadederColor);
+    text-transform: uppercase;
+}
+.topNavBarSignOut:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+    color: var(--textPrimary);
 }

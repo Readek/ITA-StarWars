@@ -20,6 +20,12 @@
 
 }
 
+html {
+  background-image: url(/Star_BG.jpeg);
+  background-position: center top;
+  background-repeat: repeat;
+}
+
 body {
   margin: 0;
   display: flex;

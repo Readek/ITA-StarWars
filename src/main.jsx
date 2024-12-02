@@ -6,7 +6,10 @@ import Root from './pages/root.jsx'
 import ErrorPage from './error-page.jsx'
 import Starships from './pages/starships.jsx'
 import StarshipDetails, {loader as shipLoader} from './pages/starship-details.jsx'
-import { SwapiProvider } from './context/SwapiContext.jsx'
+import { SwapiProvider } from './contexts/SwapiContext.jsx'
+import SignIn from './pages/signIn.jsx'
+import SignUp from './pages/signUp.jsx'
+import { AuthProvider } from './contexts/AuthContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,13 +25,23 @@ const router = createBrowserRouter([
     path: "/Starship-Details/:shipId",
     element: <StarshipDetails/>,
     loader: shipLoader
+  },
+  {
+    path: "/SignUp",
+    element: <SignUp/>,
+  },
+  {
+    path: "/SignIn",
+    element: <SignIn/>,
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SwapiProvider>
-      <RouterProvider router={router}/>
-    </SwapiProvider>
+    <AuthProvider>
+      <SwapiProvider>
+        <RouterProvider router={router}/>
+      </SwapiProvider>
+    </AuthProvider>
   </StrictMode>,
 )

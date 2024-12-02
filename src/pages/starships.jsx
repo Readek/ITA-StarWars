@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import NavBar from "../components/navbar";
 import Starship from "../components/starship";
 import "../assets/starships.css";
-import { SwapiContext } from "../context/SwapiContext";
+import { SwapiContext } from "../contexts/SwapiContext";
 import LoadingShipsMessage from "../components/loadingShipsMessage";
 
 export default function Starships() {

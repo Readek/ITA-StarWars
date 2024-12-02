@@ -1,0 +1,44 @@
+.signInContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 10px;
+    gap: 20px;
+}
+
+.signInForm {
+    padding: 20px;
+    background-color: var(--fadederColor);
+    border: 1px solid var(--fadedColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.signInFieldDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.signInFieldLabel {
+    font-size: large;
+    font-weight: bold;
+}
+.signInFieldInput {
+    width: 200px;
+}
+
+.signInErrorMessage {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 1px salmon solid;
+    border-radius: 5px;
+    font-size: small;
+}
+
+.signInSubmitBtn {
+    padding: 5px 10px;
+}

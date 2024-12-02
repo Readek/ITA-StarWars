@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
-import { SwapiContext } from "../context/SwapiContext";
 import { loadShipsObserver } from "../hooks/loadShipsObserver";
+import { SwapiContext } from "../contexts/SwapiContext";
+
+let isAlreadyLoading = false;
 
 export default function LoadingShipsMessage() {
 
@@ -11,7 +13,12 @@ export default function LoadingShipsMessage() {
         threshold: 1.0
     })
     useEffect( () => {
-        if (isLoadVisible) askForStarships();
+        if (isLoadVisible && !isAlreadyLoading) {
+            isAlreadyLoading = true;
+            askForStarships().then(() => {
+                isAlreadyLoading = false;
+            });
+        }
     }, [isLoadVisible])
 
     return (<>
