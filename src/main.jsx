@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import './assets/global.css'
 import Root from './pages/root.jsx'
 import ErrorPage from './error-page.jsx'
@@ -11,7 +11,7 @@ import SignIn from './pages/signIn.jsx'
 import SignUp from './pages/signUp.jsx'
 import { AuthProvider } from './contexts/AuthContext.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root/>,
@@ -34,9 +34,7 @@ const router = createBrowserRouter([
     path: "/SignIn",
     element: <SignIn/>,
   }
-], {
-  basename: "/ITA-StarWars"
-})
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

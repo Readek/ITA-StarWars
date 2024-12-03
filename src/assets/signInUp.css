@@ -27,7 +27,7 @@
     font-weight: bold;
 }
 .signInFieldInput {
-    width: 200px;
+    width: 240px;
 }
 
 .signInErrorMessage {
@@ -41,4 +41,11 @@
 
 .signInSubmitBtn {
     padding: 5px 10px;
+}
+
+.linkHighlight {
+    color: lightskyblue;
+}
+.linkHighlight:hover {
+    filter: brightness(1.2);
 }

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://readek.github.io/ITA-StarWars",
+  "homepage": "http://readek.github.io/ITA-StarWars/#",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

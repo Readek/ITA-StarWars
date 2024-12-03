@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext"
 import { doSignInWithEmailAndPassword } from "../firebase/auth.mjs";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "../assets/signInUp.css";
 
 export default function SignIn() {
@@ -30,8 +30,11 @@ export default function SignIn() {
     
     <div className="signInContent">
 
-    <img className="topNavBarLogo" src="/ITA-StarWars/SW_Logo.png" alt="Star Wars Logo"/>
-    <img className="topNavBarLogoM" src="/ITA-StarWars/SW_Logo_Mobile.png" alt="Star Wars Logo"/>
+    <Link to={"/"}>
+        <img className="topNavBarLogo" src="/ITA-StarWars/SW_Logo.png" alt="Star Wars Logo"/>
+        <img className="topNavBarLogoM" src="/ITA-StarWars/SW_Logo_Mobile.png" alt="Star Wars Logo"/>
+    </Link>
+    
 
         {userLoggedIn && (<Navigate to={"/"} replace={true} />)}
 
@@ -59,6 +62,8 @@ export default function SignIn() {
                     placeholder="Password"
                 />
             </div>
+
+            <span>Don't have an account? <Link className="linkHighlight" to={"/SignUp"}>Register here</Link>.</span>
 
             {errorMessage && (
                 <div className="signInErrorMessage">{errorMessage}</div>
