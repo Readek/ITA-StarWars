@@ -51,7 +51,7 @@ export default function StarshipDetails() {
                 className="shipDetailsShipImg"
                 onError={({ currentTarget }) => {
                     currentTarget.onerror = null; // prevents looping
-                    currentTarget.src="/Starship_Placeholder.jpg";
+                    currentTarget.src="/ITA-StarWars/Starship_Placeholder.jpg";
                 }}
             />
 

@@ -34,7 +34,9 @@ const router = createBrowserRouter([
     path: "/SignIn",
     element: <SignIn/>,
   }
-])
+], {
+  basename: "/ITA-StarWars"
+})
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

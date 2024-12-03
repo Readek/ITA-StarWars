@@ -12,8 +12,8 @@ export default function NavBar({curPage, highlightColor}) {
     <div id="topNavBarDiv">
 
         <div className="topNavBarLogoLogin">
-            <img className="topNavBarLogo" src="/SW_Logo.png" alt="Star Wars Logo"/>
-            <img className="topNavBarLogoM" src="/SW_Logo_Mobile.png" alt="Star Wars Logo"/>
+            <img className="topNavBarLogo" src="/ITA-StarWars/SW_Logo.png" alt="Star Wars Logo"/>
+            <img className="topNavBarLogoM" src="/ITA-StarWars/SW_Logo_Mobile.png" alt="Star Wars Logo"/>
 
             <div className="topNavBarLoginDiv">
 
