@@ -35,3 +35,15 @@ export async function fetchPeople(id) {
     return data.json();
 
 }
+
+/**
+ * Asks for a specific film
+ * @param {Number} id - Film id
+ */
+export async function fetchFilms(id) {
+    
+    const data = await fetch(url + "films/" + id);
+    if (!data.ok) return null;
+    return data.json();
+
+}

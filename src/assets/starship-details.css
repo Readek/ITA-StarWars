@@ -17,6 +17,13 @@
     margin: 20px 0px;
     width: 1300px;
     max-width: 100%;
+    animation: fadeInFromRight .3s .1s both;
+}
+.shipDetailsTitlePilots {
+    animation: fadeInFromRight .3s .4s both;
+}
+.shipDetailsTitleFilms {
+    animation: fadeInFromRight .3s .7s both;
 }
 
 .shipDetailsShipDiv {
@@ -27,7 +34,7 @@
     border: 2px solid var(--fadederColor);
     border-radius: 13px;
     overflow: hidden;
-    animation: fadeInFromRight .3s .1s both;
+    animation: fadeInFromRight .3s .3s both;
 
     @media (max-width: 800px) {
         flex-direction: column;

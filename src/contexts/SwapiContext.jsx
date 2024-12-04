@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { fetchPeople, fetchStarships } from "../data/Fetch Swapi.mjs";
+import { fetchFilms, fetchPeople, fetchStarships } from "../data/Fetch Swapi.mjs";
 
 const SwapiContext = createContext();
 
@@ -8,6 +8,7 @@ function SwapiProvider({ children }) {
     const [shipsData, setShipsData] = useState([]);
     const [shipsNextPage, setShipsNextPage] = useState();
     const [peopleData, setPeopleData] = useState({});
+    const [filmsData, setFilmsData] = useState({});
 
     async function askForStarships() {
 
@@ -45,6 +46,12 @@ function SwapiProvider({ children }) {
         return jsonData;
     }
 
+    async function askForFilm(id) {
+        const jsonData = await fetchFilms(id);
+        setFilmsData(fd => addToObject(fd, jsonData, id));
+        return jsonData;
+    }
+
     function addToObject(object, newData, id) {
         const tempData = {...object};
         tempData[id] = newData;
@@ -56,6 +63,7 @@ function SwapiProvider({ children }) {
             shipsData: shipsData, shipsNextPage: shipsNextPage,
             askForStarships: askForStarships,
             peopleData: peopleData, askForCharacter: askForCharacter,
+            filmsData: filmsData, askForFilm: askForFilm
         }}>
             {children}
         </SwapiContext.Provider>

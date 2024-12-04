@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import "../assets/starship-details.css"
 import { SwapiContext } from "../contexts/SwapiContext";
 import Pilot from "../components/pilot";
+import Film from "../components/film";
 
 const visualUrl = "https://starwars-visualguide.com/assets/img/";
 
@@ -74,11 +75,21 @@ export default function StarshipDetails() {
         </div>
 
         {(shipData.pilots && shipData.pilots[0]) && (<>
-            <div className="shipDetailsTitle">Pilots</div>
+            <div className="shipDetailsTitle shipDetailsTitlePilots">Pilots</div>
 
             <div className="shipDetailsPilots">
                 {shipData.pilots.map(pilot => (
                     <Pilot pilotId={pilot} ></Pilot>
+                ))}
+            </div>
+        </>)}
+
+        {(shipData.films && shipData.films[0]) && (<>
+            <div className="shipDetailsTitle shipDetailsTitleFilms">Films</div>
+
+            <div className="shipDetailsPilots">
+                {shipData.films.map(film => (
+                    <Film filmId={film} ></Film>
                 ))}
             </div>
         </>)}
