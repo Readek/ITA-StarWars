@@ -20,7 +20,7 @@ export default function SignIn() {
             try {
                 await doSignInWithEmailAndPassword(email, password);
             } catch (e) {
-                setErrorMessage(e.code);
+                setErrorMessage(e.message);
                 setIsSigningIn(false);
             }
         }

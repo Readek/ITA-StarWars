@@ -25,7 +25,7 @@ export default function Starships() {
 
     <div className="shipList">
 
-        {shipsData[1] && (<>
+        {shipsData[0] && (<>
 
             {shipsData.map(ship => (
                 <Starship

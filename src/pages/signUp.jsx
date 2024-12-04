@@ -20,7 +20,7 @@ export default function SignUp() {
             try {
                 await doCreateUserWithEmailAndPassword(email, password);
             } catch (e) {
-                setErrorMessage(e.code);
+                setErrorMessage(e.message);
                 setIsSigningUp(false);
             }
             

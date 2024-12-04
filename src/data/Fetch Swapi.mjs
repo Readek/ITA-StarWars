@@ -23,3 +23,15 @@ export async function fetchStarship(id) {
     return data.json();
 
 }
+
+/**
+ * Asks for a specific character
+ * @param {Number} id - Character id
+ */
+export async function fetchPeople(id) {
+    
+    const data = await fetch(url + "people/" + id);
+    if (!data.ok) return null;
+    return data.json();
+
+}

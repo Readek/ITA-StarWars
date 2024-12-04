@@ -4,6 +4,7 @@ import { fetchStarship } from "../data/Fetch Swapi.mjs";
 import { useContext, useEffect, useState } from "react";
 import "../assets/starship-details.css"
 import { SwapiContext } from "../contexts/SwapiContext";
+import Pilot from "../components/pilot";
 
 const visualUrl = "https://starwars-visualguide.com/assets/img/";
 
@@ -41,7 +42,7 @@ export default function StarshipDetails() {
 
     <div className="shipDetailsContent">
 
-        <div className="shipDetailsStarshipTitle">Starship</div>
+        <div className="shipDetailsTitle">Starship</div>
 
         <div className="shipDetailsShipDiv">
 
@@ -71,6 +72,16 @@ export default function StarshipDetails() {
             </div>
 
         </div>
+
+        {(shipData.pilots && shipData.pilots[0]) && (<>
+            <div className="shipDetailsTitle">Pilots</div>
+
+            <div className="shipDetailsPilots">
+                {shipData.pilots.map(pilot => (
+                    <Pilot pilotId={pilot} ></Pilot>
+                ))}
+            </div>
+        </>)}
 
     </div>
 
